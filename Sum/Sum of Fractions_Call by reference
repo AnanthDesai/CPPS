@@ -5,7 +5,7 @@ typedef struct {
 	int den;
  }frac;
 
-int input(frac* f)
+void input(frac* f)
  {
   printf("Enter the numerator of the first fraction");
   scanf("%d",&f[0].num);
@@ -14,8 +14,7 @@ int input(frac* f)
   printf("\nEnter the numerator of the second fraction");
   scanf("%d",&f[1].num);
   printf("\nEnter the denominator of the second fraction");
-  scanf("%d",&f[1].den); 
-  return 0;
+  scanf("%d",&f[1].den);
  }
 
 frac compute(frac* f)
@@ -33,13 +32,12 @@ frac compute(frac* f)
   return fm;
  }
 
-int output(frac fm)
+void output(frac fm)
  {
   printf("The sum of the fractions is: %d/%d\n",fm.num,fm.den);
-  return 0;
  }
 
-int main()
+void main()
  {
   frac f[2],fm;
   input(f);
